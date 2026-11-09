@@ -1,0 +1,51 @@
+:root {
+  --ink: #16324f;
+  --ink-soft: #2c5a86;
+  --accent: #a62a66;
+  --paper: #f7f4ed;
+  --card: #ffffff;
+  --text: #1b2430;
+  --muted: #4a5868;
+  --rule: #e2dccd;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #9ec3ea;
+    --ink-soft: #9ec3ea;
+    --accent: #f0a9cb;
+    --paper: #0e1620;
+    --card: #17222f;
+    --text: #e8edf3;
+    --muted: #b3c0cd;
+    --rule: #263445;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--text);
+  font: 17px/1.6 "Atkinson Hyperlegible", -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+.band { background: var(--ink); color: #fff; }
+@media (prefers-color-scheme: dark) { .band { background: #16324f; } }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+header.band .wrap { display: flex; align-items: center; gap: 14px; padding-top: 18px; padding-bottom: 18px; }
+header img { width: 44px; height: 44px; border-radius: 10px; }
+header a.home { color: #fff; text-decoration: none; font-weight: 700; font-size: 20px; }
+nav { margin-left: auto; display: flex; gap: 16px; flex-wrap: wrap; }
+nav a { color: #dbe7f4; text-decoration: none; font-size: 15px; }
+nav a:hover { text-decoration: underline; }
+main { padding: 28px 0 56px; }
+h1 { font-size: 30px; line-height: 1.25; margin: 0 0 6px; color: var(--ink); }
+h2 { font-size: 20px; margin: 30px 0 8px; color: var(--ink); }
+.stamp { color: var(--muted); font-size: 15px; margin: 0 0 22px; }
+.card { background: var(--card); border: 1px solid var(--rule); border-radius: 14px; padding: 18px 20px; margin: 18px 0; }
+.card.note { border-left: 4px solid var(--accent); }
+a { color: var(--ink-soft); }
+table { border-collapse: collapse; width: 100%; font-size: 15px; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+footer { border-top: 1px solid var(--rule); color: var(--muted); font-size: 14px; padding: 18px 0 40px; }
+.feature { display: grid; grid-template-columns: 1fr; gap: 12px; }
+@media (min-width: 640px) { .feature { grid-template-columns: 1fr 1fr 1fr; } }
